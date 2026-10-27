@@ -42,14 +42,4 @@ for a clean, reproducible test accuracy.
    `metrics.json`, `confusion_matrix.png`, `gradcam.png` and put them in this folder.
    Colab deletes files when the session ends, so download right away.
 
-## Demo script (5 min)
-1. **Analyze**: upload 2-3 files from `samples/` (a River, a Forest). Show prediction + heatmap.
-2. **Change detection**: upload `scene_before.png` and `scene_after.png`. Show red-boxed cells. Move the grid/threshold sliders.
-3. **Mission planner**: upload several `samples/*.png` (they carry coordinates in the filename). Move the time budget, set River priority to 0, show the plan change. Point to "vs random plan".
-4. Show `confusion_matrix.png` and `gradcam.png` (including a misclassified example).
 
-## What is real vs simulated (say this to faculty)
-- Real: classifier, Grad-CAM, change detection, planner algorithm, pixel-based cloud estimate.
-- Simulated: locations unless given in the filename; the "simulated" background targets. The table's `src` column labels every row.
-- Cloud estimate is a brightness heuristic, not a trained detector; EuroSAT tiles are mostly cloud-free, so values are near 0.
-- EuroSAT tiles are 64x64 px single patches; the change-detection grid cuts a scene into such patches.
